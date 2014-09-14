@@ -3,14 +3,25 @@
 namespace App\Controllers\Dinner;
 
 use App\Controllers\BaseController;
+use FintechFab\Models\DinnerMenuItem;
+use FintechFab\Models\User;
+use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DinnerController extends BaseController
 {
 
     public $layout = 'dinner';
 
-    public function dinner()
-    {
+	/**
+	 * Показывает страницу /dinner
+	 *
+	 * @return $this|\Illuminate\View\View
+	 */
+	public function dinner()
+	{
+		return $this->make('dinner');
+    }
 
 	/**
 	 * Импортирует файл меню в базу данных
