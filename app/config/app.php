@@ -113,6 +113,7 @@ return array(
 
 		'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Codesleeve\AssetPipeline\AssetPipelineServiceProvider',
+		'Maatwebsite\Excel\ExcelServiceProvider'
 
 	),
 
@@ -179,7 +180,7 @@ return array(
 		'URL'         => 'Illuminate\Support\Facades\URL',
 		'Validator'   => 'Illuminate\Support\Facades\Validator',
 		'View'        => 'Illuminate\Support\Facades\View',
-
+		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 	),
 
 );

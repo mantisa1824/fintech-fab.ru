@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateDinnerMenuUsersTable extends Migration
+class CreateDinnerMenuSectionsTable extends Migration
 {
 
 	/**
@@ -13,11 +13,9 @@ class CreateDinnerMenuUsersTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('dinner_menu_users', function (Blueprint $table) {
+		Schema::create('dinner_menu_sections', function (Blueprint $table) {
 			$table->increments('id');
-			$table->integer('user_id')->unsigned()->default(0);
-			$table->integer('dinner_menu_item_id')->unsigned()->default(0);
-			$table->integer('count')->unsigned()->default(1);
+			$table->text('title')->default(''); //название раздела
 			$table->softDeletes();
 			$table->timestamps();
 		});
@@ -30,7 +28,7 @@ class CreateDinnerMenuUsersTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('dinner_menu_users');
+		Schema::drop('dinner_menu_sections');
 	}
 
 }

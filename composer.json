@@ -28,7 +28,8 @@
 		"phpunit/phpunit-mock-objects": "2.3.*@dev",
 		"phpunit/phpunit": "4.3.*@dev",
 		"zizaco/factory-muff": "dev-master",
-		"mockery/mockery": "0.9.*"
+		"mockery/mockery": "0.9.*",
+		"maatwebsite/excel": "1.*"
 	},
 	"autoload": {
 		"classmap": [
@@ -57,11 +58,11 @@
 			"php artisan key:generate"
 		]
 	},
-    "config": {
-        "preferred-install": "dist",
-        "github-oauth": {
-            "github.com": "57b13bc22c26e533040d24b50ef8d910f44bcafa"
-        }
-    },
+	"config": {
+		"preferred-install": "dist",
+		"github-oauth": {
+			"github.com": "57b13bc22c26e533040d24b50ef8d910f44bcafa"
+		}
+	},
 	"minimum-stability": "stable"
 }
