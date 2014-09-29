@@ -9,14 +9,28 @@
 class DinnerMenuItemTableSeeder extends Seeder{
 
 	public function run(){
-		return array(
-			array(
-				'title' => 'Блюдо № 1',
-				'description' => 'салат Греческий; семга отварная с овощами; картофельное пюре с добавлением натурального сливочного масла; хлеб пшеничный; хлеб ржаной; Вилка столовая одноразовая; Нож столовый одноразовый',
-				'price' => 120,
-				'date' => '',
-				'deleted' => false,
-			)
-		);
+
+		for($i = 0 , $section = 1; $i < 25; $i++) {
+
+			if( !($i % 5) && $i > 1 ){
+				$section++;
+			}
+
+			$price = rand(100 , 500);
+
+			$data = array(
+				array(
+					'title'       => 'Блюдо № ' .$i,
+					'description' => 'салат Греческий; семга отварная с овощами; картофельное пюре с добавлением натурального сливочного масла; хлеб пшеничный; хлеб ржаной; Вилка столовая одноразовая; Нож столовый одноразовый',
+					'price'       => $price,
+					'date'        => '',
+					'deleted_at'     => false,
+					'section_id' => $section,
+					/*'date' => ,*/
+				)
+			);
+
+			DB::table('dinner_menu_items')->insert($data);
+		}
 	}
 } 

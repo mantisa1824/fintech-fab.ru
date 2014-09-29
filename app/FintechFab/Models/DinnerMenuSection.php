@@ -3,6 +3,7 @@
 namespace FintechFab\Models;
 
 use Eloquent;
+Use DB;
 
 /**
  * Class DinnerMenuSection
@@ -20,4 +21,6 @@ class DinnerMenuSection extends Eloquent
 	protected $fillable = array('title');
 
 	protected $table = 'dinner_menu_sections';
+
+
 }

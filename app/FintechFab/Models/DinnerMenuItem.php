@@ -29,4 +29,8 @@ class DinnerMenuItem extends Eloquent
 	{
 		return $this->belongsTo('FintechFab\Models\DinnerMenuSection', 'section_id', 'id');
 	}
+
+
+
+
 }
